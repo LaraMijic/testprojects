@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Barlow', sans-serif;
+    }
+
+    .page {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    /* ── LEFT PANEL ── */
+    .left {
+      flex: 0 0 42%;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      padding: 5vh 5vw;
+    }
+
+    /* fills remaining space and centers content within it */
+    .left-top {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1.2rem;
+    }
+
+    .logo-wrap {
+      display: block;
+      width: clamp(140px, 22vw, 280px);
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .reports-heading {
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      font-weight: 700;
+      color: #1a2a6c;
+      letter-spacing: 0.02em;
+    }
+
+    .divider {
+      border: none;
+      border-top: 3px solid #b0c4de;
+      width: 85%;
+      margin: 0.3rem 0 1.4rem;
+    }
+
+    .instruction {
+      font-size: clamp(1rem, 1.5vw, 1.4rem);
+      font-weight: 600;
+      color: #1a6cb5;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: clamp(1rem, 1.3vw, 1.3rem);
+      color: #1a6cb5;
+      padding-bottom: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .footer svg {
+      width: 1.1em;
+      height: 1.1em;
+      flex-shrink: 0;
+      color: #1a6cb5;
+    }
+
+    .footer a {
+      color: #1a6cb5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-sep {
+      color: #aac0d8;
+      margin: 0 0.3rem;
+      font-weight: 300;
+    }
+
+    /* ── RIGHT PANEL ── */
+    .right {
+      flex: 1;
+      background: #5f7a94;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 2.5vh 2.5vw;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- LEFT -->
+    <div class="left">
+      <div class="left-top">
+        <img class="logo-wrap" src="imgs/ere_logo_2.jpg" alt="Logo" />
+
+        <h1 class="reports-heading">Reports</h1>
+        <hr class="divider" />
+        <p class="instruction">To get started, select a report from the lefthand menu</p>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="M2 7l10 7 10-7"/>
+        </svg>
+
+        <a href="mailto:support@ereinsure.com">support@ereinsure.com</a>
+        <span class="footer-sep">|</span>
+        <a href="mailto:reports@ereinsure.com">reports@ereinsure.com</a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <img class="hero-img" src="imgs/london-22-bishops-gate.jpeg" alt="Hero image" />
+    </div>
+
+  </div>
+</body>
+</html>
